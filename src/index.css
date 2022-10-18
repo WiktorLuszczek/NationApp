@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+}
+.dark {
+  background-color: black;
+}
+.light {
+  background-color: white;
+  color: black;
+}
+
+/* NAV */
+
+nav {
+  margin: 0 100px;
+  display: flex;
+  justify-content: space-between;
+}
+.light > nav > button {
+  border: none;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 5px 0;
+  cursor: pointer;
+}
+.dark > nav > h1 {
+  color: white;
+}
+.dark > nav > button {
+  border: none;
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+  border-radius: 5px;
+  margin: 5px 0;
+  cursor: pointer;
+}
+button > p {
+  margin: 5px 0 0;
+}
+
+/* MAIN */
+
+.light > main {
+  background-color: rgb(230, 230, 230);
+}
+.dark > main {
+  background-color: rgb(24, 24, 24);
+}
+main {
+  min-height: 85vh;
+  padding: 15px 100px;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.card {
+  border-radius: 6px;
+  margin: 20px 0;
+  width: 275px;
+  height: 300px;
+  background-color: white;
+}
+.card > p > span {
+  font-weight: bold;
+}
+.card > img {
+  border-radius: 5px 5px 0 0;
+  width: 275px;
+  height: 160px;
+}
+.card > h1 {
+  font-size: 20px;
+  margin: 10px 20px;
+}
+.card > p {
+  font-size: 14px;
+  margin: 5px 20px;
+}
+main > form {
+  display: flex;
+  justify-content: space-between;
+}
+.MuiFormControl-root {
+  background-color: white;
+}
+.MuiFormBase-root {
+  background-color: white;
+}
