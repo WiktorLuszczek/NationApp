@@ -19,7 +19,17 @@ export type CountryType = {
   };
   capital: string;
 };
-
+type SelectOptionType = {
+  option: string;
+};
+const selectOptions = [
+  { option: "All" },
+  { option: "Africa" },
+  { option: "Americas" },
+  { option: "Asia" },
+  { option: "Europe" },
+  { option: "Oceania" },
+];
 export const Main = () => {
   const data = GetData();
   const countries = data.data?.data;
@@ -63,12 +73,11 @@ export const Main = () => {
               label="Age"
               onChange={(e) => setRegion(e.target.value)}
             >
-              <MenuItem value={"All"}>All</MenuItem>
-              <MenuItem value={"Africa"}>Africa</MenuItem>
-              <MenuItem value={"Americas"}>Americas</MenuItem>
-              <MenuItem value={"Asia"}>Asia</MenuItem>
-              <MenuItem value={"Europe"}>Europe</MenuItem>
-              <MenuItem value={"Oceania"}>Oceania</MenuItem>
+              {selectOptions.map((selectOption: SelectOptionType) => (
+                <MenuItem value={selectOption.option}>
+                  {selectOption.option}
+                </MenuItem>
+              ))}
             </Select>
           </FormControl>
         </form>
